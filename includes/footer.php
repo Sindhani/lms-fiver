@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                   &copy; SEGI LIBRARY MANAGEMENT SYSTEM <?php echo date('Y');?>
+                   &copy; SEGI LMS @ <?php echo date('Y');?>
                 </div>
 
             </div>

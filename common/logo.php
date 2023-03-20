@@ -1,0 +1,1 @@
+<div style="background-image: url('assets/img/logo.png'); width: 100px; height: 100px; background-size: contain" ></div>

@@ -1,11 +1,4 @@
-<?php
-error_reporting(1);
-include('includes/config.php');
-$sql = "SELECT * FROM tbannouncements WHERE status = 1 ORDER BY id DESC";
-$query = $dbh->prepare($sql);
-$query->execute();
-$announcements = $query->fetchAll(PDO::FETCH_ASSOC);
-?>
+
 <div class="navbar navbar-inverse set-radius-zero">
     <div class="container">
         <div class="navbar-header">
@@ -14,9 +7,7 @@ $announcements = $query->fetchAll(PDO::FETCH_ASSOC);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">
-                <img src="assets/img/logo.png" class="img-responsive img-rounded" width="250"/>
-            </a>
+            <?php require_once "./common/logo.php" ?>
 
         </div>
         <?php if ($_SESSION['login']) {
@@ -79,11 +70,4 @@ $announcements = $query->fetchAll(PDO::FETCH_ASSOC);
     </section>
 
 <?php } ?>
-<div class="container-fluid">
-    <h3 class="center-block"> Announcements</h3>
-    <marquee behavior="scroll" direction="left" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
-        <?php foreach ($announcements as $announcement) { ?>
-            <strong><?= $announcement['announcement_title'] ?></strong>
-        <?php } ?>
-    </marquee>
-</div>
+<?php require_once 'common/announcements.php';

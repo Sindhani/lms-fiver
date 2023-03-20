@@ -1,3 +1,6 @@
+<?php
+error_reporting(1)
+?>
 <div class="navbar navbar-inverse set-radius-zero">
     <div class="container">
         <div class="navbar-header">
@@ -6,11 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">
-
-                <img src="assets/img/logo.png" class="img-responsive img-rounded" width="250"/>
-            </a>
-
+            <?php require_once __DIR__ . '/../../common/logo.php'; ?>
         </div>
 
         <div class="right-div">

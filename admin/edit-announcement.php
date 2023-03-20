@@ -30,7 +30,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta name="description" content=""/>
         <meta name="author" content=""/>
-        <title>Online Library Management System | Edit Announcement</title>
+        <title>SEGI LMS | Edit Announcement</title>
         <!-- BOOTSTRAP CORE STYLE  -->
         <link href="assets/css/bootstrap.css" rel="stylesheet"/>
         <!-- FONT AWESOME STYLE  -->

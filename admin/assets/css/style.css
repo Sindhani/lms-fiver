@@ -220,7 +220,5 @@ height: 60px;
     }
 
 .content-wrapper{
-    background-image: url("../img/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #C3B1E1;
 }

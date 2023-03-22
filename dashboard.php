@@ -22,7 +22,12 @@ if (strlen($_SESSION['login']) == 0) {
         <link href="assets/css/style.css" rel="stylesheet"/>
         <!-- GOOGLE FONT -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-
+        <style>
+            .text-bold{
+                font-weight: bold;
+                font-size: 18px;
+            }
+        </style>
     </head>
     <body>
     <!------MENU SECTION START-->
@@ -43,7 +48,7 @@ if (strlen($_SESSION['login']) == 0) {
                 <a href="listed-books.php">
                     <div class="col-md-4 col-sm-4 col-xs-6">
                         <div class="alert alert-success back-widget-set text-center">
-                            <i class="fa fa-book fa-5x"></i>
+                            <i class="fa fa-book fa-5x" style="color: #81bd00"></i>
                             <?php
                             $sql = "SELECT id from tblbooks ";
                             $query = $dbh->prepare($sql);
@@ -52,14 +57,14 @@ if (strlen($_SESSION['login']) == 0) {
                             $listdbooks = $query->rowCount();
                             ?>
                             <h3><?php echo htmlentities($listdbooks); ?></h3>
-                            Books Listed
+                            <span class="text-bold">Books Listed</span>
                         </div>
                     </div>
                 </a>
 
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <div class="alert alert-warning back-widget-set text-center">
-                        <i class="fa fa-recycle fa-5x"></i>
+                        <i class="fa fa-undo fa-5x" style="color: red"></i>
                         <?php
                         $rsts = 0;
                         $sid = $_SESSION['stdid'];
@@ -73,7 +78,7 @@ if (strlen($_SESSION['login']) == 0) {
                         ?>
 
                         <h3><?php echo htmlentities($returnedbooks); ?></h3>
-                        Books Not Returned Yet
+                        <span class="text-bold">Books Not Returned Yet</span>
                     </div>
                 </div>
 
@@ -82,7 +87,7 @@ if (strlen($_SESSION['login']) == 0) {
                         <div class="alert alert-success back-widget-set text-center">
                             <i class="fa fa-book fa-5x"></i>
                             <h3>&nbsp;</h3>
-                            Issued Books
+                            <span class="text-bold">Issued Books</span>
                         </div>
                     </div>
                 </a>

@@ -46,7 +46,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <a href="manage-books.php">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="alert alert-success back-widget-set text-center">
-                            <i class="fa fa-book fa-5x"></i>
+                            <i class="fa fa-book fa-5x " style="color: yellow"></i>
 
 
                             <?php
@@ -57,7 +57,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             $listdbooks = $query->rowCount();
                             ?>
                             <h3><?php echo htmlentities($listdbooks); ?></h3>
-                            Books Listed
+                            <span class="text-bold">Books Listed</span>
                         </div>
                     </div>
                 </a>
@@ -66,7 +66,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <a href="manage-issued-books.php">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="alert alert-warning back-widget-set text-center">
-                            <i class="fa fa-recycle fa-5x"></i>
+                            <i class="fa fa-undo fa-5x" style="color: red"></i>
                             <?php
                             $sql2 = "SELECT id from tblissuedbookdetails where (RetrunStatus='' || RetrunStatus is null)";
                             $query2 = $dbh->prepare($sql2);
@@ -76,7 +76,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             ?>
 
                             <h3><?php echo htmlentities($returnedbooks); ?></h3>
-                            Books Not Returned Yet
+                            <span class="text-bold">Books Not Returned Yet</span>
                         </div>
                     </div>
                 </a>
@@ -84,7 +84,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <a href="reg-students.php">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="alert alert-danger back-widget-set text-center">
-                            <i class="fa fa-users fa-5x"></i>
+                            <i class="fa fa-users fa-5x" style="color: #5da4b8"></i>
                             <?php
                             $sql3 = "SELECT id from tblstudents ";
                             $query3 = $dbh->prepare($sql3);
@@ -93,7 +93,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             $regstds = $query3->rowCount();
                             ?>
                             <h3><?php echo htmlentities($regstds); ?></h3>
-                            Registered Users
+                            <span class="text-bold">Registered Users</span>
                         </div>
                     </div>
                 </a>
@@ -102,7 +102,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <a href="manage-authors.php">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="alert alert-success back-widget-set text-center">
-                            <i class="fa fa-user fa-5x"></i>
+                            <i class="fa fa-user-md fa-5x" style="color: #8a6d3b"></i>
                             <?php
                             $sq4 = "SELECT id from tblauthors ";
                             $query4 = $dbh->prepare($sq4);
@@ -111,7 +111,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             $listdathrs = $query4->rowCount();
                             ?>
                             <h3><?php echo htmlentities($listdathrs); ?></h3>
-                            Authors Listed
+                            <span class="text-bold">Authors Listed</span>
                         </div>
                     </div>
                 </a>
@@ -124,7 +124,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <a href="manage-categories.php">
                     <div class="col-md-3 col-sm-3 rscol-xs-6">
                         <div class="alert alert-info back-widget-set text-center">
-                            <i class="fa fa-file-archive-o fa-5x"></i>
+                            <i class="fa fa-list fa-5x" style="color: #c4e3f3"></i>
                             <?php
                             $sql5 = "SELECT id from tblcategory ";
                             $query5 = $dbh->prepare($sql5);
@@ -134,7 +134,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             ?>
 
                             <h3><?php echo htmlentities($listdcats); ?> </h3>
-                            Listed Categories
+                            <span class="text-bold">Listed Categories</span>
                         </div>
                     </div>
                 </a>

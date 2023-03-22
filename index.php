@@ -52,14 +52,15 @@ if (isset($_POST['login'])) {
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <style>
         .img-wrapper {
-            height: 250px!important;
+            height: 300px!important;
             overflow: hidden;
         }
 
         .img-wrapper img {
             width: 100%;
-            object-fit: contain;
-            object-position: center;
+
+            object-fit: fill;
+            object-position: top;
         }
     </style>
 </head>
@@ -76,7 +77,7 @@ if (isset($_POST['login'])) {
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="img-wrapper">
-                                <img src="assets/img/1.jpeg">
+                                <img src="assets/img/1.jpg">
                             </div>
                         </div>
                         <div class="item">

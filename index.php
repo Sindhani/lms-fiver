@@ -52,15 +52,15 @@ if (isset($_POST['login'])) {
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <style>
         .img-wrapper {
-            height: 300px!important;
+            height: 500px!important;
             overflow: hidden;
         }
 
         .img-wrapper img {
             width: 100%;
 
-            object-fit: fill;
-            object-position: top;
+            object-fit: contain;
+            object-position: center;
         }
     </style>
 </head>

@@ -6,11 +6,23 @@ $query = $dbh->prepare($sql);
 $query->execute();
 $announcements = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<div class="container-fluid">
-    <h3 class="center-block"> Announcements</h3>
-    <marquee behavior="scroll" direction="left" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+<div class="container bg-info">
+    <h3 class="center-block text-center" style="font-weight: bold"> SEGI ANNOUNCEMENT BOARD</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>S#</th>
+            <th>Current Announcements</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php $index = 1; ?>
         <?php foreach ($announcements as $announcement) { ?>
-            <strong><?= $announcement['announcement_title'] ?></strong>
+            <tr>
+                <td><?= $index++; ?></td>
+                <td><?= $announcement['announcement_title'] ?></td>
+            </tr>
         <?php } ?>
-    </marquee>
+        </tbody>
+    </table>
 </div>
